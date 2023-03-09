@@ -1,0 +1,23 @@
+<div class="login-container">
+  <img src="../../assets/Images/film.png" class="film" alt="">
+  <div class="logo">Cinema</div>
+  <div class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis sapiente ea maiores et incidunt
+    dicta asperiores beatae? Rerum molestiae explicabo fuga quod enim tempore, incidunt sed, accusantium, voluptates
+    eius exercitationem!</div>
+
+  <div class="login-form">
+
+    <div class="form-group">
+      <label for="username">UserName</label>
+      <input type="text" name="username" id="" placeholder="UserName" class="form-control my-2" [(ngModel)]="username">
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" name="username" id="" placeholder="Password" class="form-control my-2"
+        [(ngModel)]="password">
+    </div>
+
+    <button class="btn btn-dark my-2" (click)="CheckLogin()">Login</button>
+    <div role="alert" class="alert" *ngIf="errorNum">{{errorMsg}}</div>
+  </div>
+</div>

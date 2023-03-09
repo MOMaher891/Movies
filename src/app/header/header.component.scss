@@ -1,0 +1,30 @@
+.header-container {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  background-color: #fdc827;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    font: {
+      size: 24px;
+      weight: bolder;
+      family: 'Creepster', cursive;
+    }
+
+    cursor: pointer;
+    margin-left:40px;
+  }
+
+  .logout {
+    font: {
+      size: 18px;
+      weight: bolder;
+      family: 'Creepster', cursive;
+    }
+
+    cursor: pointer;
+    margin-right:40px;
+  }
+}

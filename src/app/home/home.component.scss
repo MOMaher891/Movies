@@ -1,0 +1,145 @@
+.home-container {
+  color: white;
+
+  h4 {
+    text-transform: uppercase;
+    font-weight: bolder;
+    // border-left: 5px solid #ff9900;
+    padding-left: 10px;
+    position: relative;
+  }
+
+  .title {
+    :hover::after {
+      width: 100%;
+      opacity: 0.5;
+    }
+
+    ::after {
+      content: "";
+      position: absolute;
+      width: 5px;
+      height: 29px;
+      background-color: #ff9900;
+      left: 0px;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      transition: 0.7s ease-in-out;
+    }
+  }
+
+  display: flex;
+  height: calc(100vh - 80px);
+
+  .all-Movies {
+    width: 75%;
+    padding: 20px 40px;
+    font-family: "Roboto", sans-serif;
+
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
+
+
+
+      .view-all {
+        color: #ff9900;
+        cursor: pointer;
+      }
+    }
+
+    .movie-thumbnail {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      .movie {
+
+
+        margin-top: 10px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+
+
+        .cover-image {
+          ::after {
+            content: "";
+            height: 100%;
+            width: 0px;
+            background-color: #ff9900;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: 0.7s ease-in-out;
+
+          }
+
+          :hover::after {
+            width: 100%;
+            opacity: 0.2;
+            border-radius: 5px;
+          }
+
+          :hover img {
+            opacity: 1;
+            // transform: scale(1.1, 1.0);
+            transform: rotate(1deg);
+          }
+
+          position: relative;
+
+
+          img {
+            border-radius: 5px;
+            width: 100%;
+            height: 210px;
+            transition: 0.5s ease-in-out;
+            opacity: 0.9;
+          }
+
+        }
+
+        .name {
+          font-weight: bolder;
+          max-width: 200px;
+          margin: 5px 0;
+        }
+      }
+    }
+  }
+
+
+  .popular-movie {
+    width: 25%;
+    padding: 20px 40px;
+    font-family: "Roboto", sans-serif;
+    border-left: 1px solid #fdc827;
+    border-right: 1px solid #fdc827;
+
+    .movie {
+      display: flex;
+      margin: 15px 0px;
+      align-items: center;
+      cursor: pointer;
+
+      .details {
+        .name {
+          font-weight: bolder;
+        }
+      }
+
+
+      .cover {
+        margin-right: 10px;
+
+        img {
+          border-radius: 10%;
+        }
+      }
+    }
+  }
+}

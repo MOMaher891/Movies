@@ -1,0 +1,245 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-family: cursive;
+}
+
+.page-section {
+  background-image: url('bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-section .content-details {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-section .pendulm-platform {
+  width: 500px;
+  border-top: 5px solid #12155a;
+  top: 0;
+  position: absolute;
+  text-align: center;
+}
+
+.page-section .pendulm-holder {
+  width: 50px;
+  height: 40px;
+  background-color: #12155a;
+  border-radius: 0 0 50% 50%;
+  margin: auto;
+}
+
+.page-section .pendulm-thread {
+  display: inline-block;
+  width: 20px;
+  height: 130px;
+  background-color: #8a57c5;
+  border-radius: 20px;
+  position: relative;
+  transform-origin: 50% 0;
+  animation: pendlum-move 2.5s ease-in-out infinite;
+}
+
+
+.page-section .pendulm-thread::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #8a57c5;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  top: -4.5px;
+  left: 4.5px;
+}
+
+.page-section .pendulm-knob {
+  width: 17px;
+  height: 16px;
+  position: absolute;
+  top: -29px;
+  left: 1.4px;
+  border: 5px solid #8a57c5;
+  border-radius: 50%;
+  border-bottom: 2px solid transparent;
+}
+
+.page-section .pendulm {
+  width: 200px;
+  height: 200px;
+  background-color: #9874d8;
+  border-radius: 50%;
+  position: absolute;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  bottom: -190px;
+  left: -90px;
+  font-weight: bolder;
+  font-size: 40px;
+  color: #FFF;
+}
+
+.page-section .pendlum-shadow {
+  width: 110px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  margin: 215px auto 0;
+  animation: shadow-move 1.25s ease-in-out alternate infinite;
+}
+
+.page-section .text-details {
+  padding-top: 400px;
+}
+
+.page-section .text-details .sub-title,
+.page-section .text-details .detail-text {
+  display: block;
+  color: #f2edf9;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.page-section .text-details .sub-title {
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 30px;
+
+}
+
+.page-section .text-details .back-btn {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.page-section .text-details .back-btn .btn {
+  padding: 8px 15px;
+  color: #f2edf9;
+  border-radius: 30px;
+  text-decoration: none;
+  background-color: #7e26a1;
+  display: inline-block;
+  transition: 0.3s;
+  border: 1px solid #FFF;
+}
+
+.page-section .text-details .back-btn .btn:hover {
+  background-color: #9874d8;
+  color: #FFF;
+}
+
+.page-section .animated-shape .shape {
+  position: absolute;
+}
+
+.page-section .animated-shape .shape:nth-child(1) {
+  top: 60%;
+  left: 20%;
+  width: 42px;
+  font-weight: bolder;
+  animation: shape-rotate 7s linear infinite;
+}
+
+.page-section .animated-shape .shape:nth-child(2) {
+  top: 27%;
+  right: 6%;
+  width: 38px;
+  height: 38px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  font-weight: bolder;
+  animation: shape-move 7s linear infinite;
+}
+
+.page-section .animated-shape .shape:nth-child(3) {
+  top: 13%;
+  right: 6.5%;
+  width: 2px;
+  height: 200px;
+  transform: rotate(-23deg);
+  background-color: #FFF;
+  font-weight: bolder;
+}
+
+/* .page-section .animated-shape .shape:nth-child(4) {
+  top: 27%;
+  right: 14%;
+  width: 2px;
+  height: 200px;
+  transform: rotate(-23deg);
+  background-color: #FFF;
+  font-weight: bolder;
+} */
+
+.page-section .animated-shape .shape:nth-child(5) {
+  bottom: 24%;
+  right: 40%;
+  width: 26px;
+  font-weight: bolder;
+  animation: shape-rotate 7s linear infinite;
+}
+
+@keyframes shape-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shape-move {
+
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+
+  50% {
+    transform: translate3d(-100px, 30px, 30px) rotate(360deg);
+  }
+}
+
+@keyframes pendlum-move {
+
+  0%,
+  100% {
+    transform: rotate(-25deg);
+  }
+
+  50% {
+    transform: rotate(25deg);
+  }
+}
+
+@keyframes shadow-move {
+
+  0% {
+    transform: translateX(220px) scale(1.4, 0.5);
+    filter: blur(20px);
+  }
+
+  50% {
+    filter: blur(3px);
+  }
+
+  100% {
+    transform: translateX(-220px) scale(1.4, 0.5);
+    filter: blur(20px);
+  }
+}
